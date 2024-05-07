@@ -134,12 +134,6 @@ e:
     }
 }
 
-void bill()
-{
-    system("CLS");
-    cout << "a";
-}
-
 int main()
 {
     int login();

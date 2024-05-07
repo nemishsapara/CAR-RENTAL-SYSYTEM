@@ -104,5 +104,97 @@ void Details(int Choice1)
     cout << "\t\t\t-----------------------------\n\n\n";
     cout << "\t\t\tModel : " << car.model[Choice1 - 1] << endl;
 }
+void user_input(int thechoice)
+{
+    system("CLS");
+    int i, amount, e;
+    int j = thechoice - 1;
+
+    cout << "\t\t\t----------------------------------------\n";
+    cout << "\t\t\tPlease Provide Your Personal Details  : \n";
+    cout << "\t\t\t----------------------------------------\n\n";
+    cout << "\t\t\tEnter Your Name : ";
+    cin >> lease.Name[10];
+    cout << "\t\t\tEnter Your age : ";
+    cin >> lease.age[5];
+    cout << "\t\t\tEnter Your city : ";
+    cin >> lease.city[5];
+
+    cout << "\t\t\tEnter Your contact number : ";
+e:
+    cin >> lease.contact[10];
+    cout << "\n";
+    if (999999999 < lease.contact[10] && lease.contact[10] < 10000000000)
+    {
+    }
+    else
+    {
+        cout << "Pleas enter a valid contact number.";
+        goto e;
+    }
+}
+
+void bill()
+{
+    system("CLS");
+    cout << "a";
+}
+
+int main()
+{
+    int login();
+    login();
+
+    string decide = "yes";
+    cout << "\t\t\t----------------------------------------------\n";
+    cout << "\t\t\t\tSIMPLE CAR RENTAL SYSTEM \n";
+    cout << "\t\t\tWelcome to Our Company ,Choose from the menu : " << endl;
+    cout << "\t\t\t----------------------------------------------\n";
+    while (decide != "exit")
+    {
+        Menu1();
+
+        int thechoice1, thechoice2;
+        Menu2();
+
+        cin >> decide;
+        if (decide == "yes")
+        {
+            user_input(thechoice2);
+            cout << "---------------------------------------------------------------------\n\n";
+            cout << "Name : " << lease.Name[10];
+            cout << "\nAge : " << lease.age[5];
+            cout << "\nCity : " << lease.city[5] << "\n";
+            cout << "\n\nCar : " << lease.car;
+            cout << "\nRent = " << lease.rent;
+            cout << "\nService charges (1 % fixed) = " << (lease.rent * 0.01);
+            cout << "\nGST (18 % fixed)= " << (lease.rent * 0.18);
+            cout << "\nTotal Amount = " << (lease.rent + (lease.rent * 0.01) + (lease.rent * 0.18));
+            cout << "\n\nThank you\n";
+            cout << "Visit again";
+            cout << "\n\n---------------------------------------------------------------------";
+            decide = "exit";
+        }
+
+        else
+        {
+            if (decide == "no")
+            {
+                system("CLS");
+                continue;
+            }
+            else if (decide == "exit")
+            {
+                system("CLS");
+                break;
+            }
+        }
+    }
+
+    getch();
+    cout<<"\nTHIS PROJECT IS SUBMITED BY,\n\t\t23AIML061_NEMISH SAPARA\n\t\t23AIML063_KAUSHAL SAVALIYA\n\t\t23AIML066_DEVANSHU SHELADIYA";
+
+    return 0;
+}
 
 

@@ -196,5 +196,37 @@ int main()
 
     return 0;
 }
+int login()
+{
+    string pass = "";
+    char ch;
+    cout << "\n\n\n\n\n\n\n\t\t\t\t\t\t\t --------------------------------------------\n";
+    cout << "\t\t\t\t\t\t\t|            MANSORY Car Rental              |";
+    cout << "\n\t\t\t\t\t\t\t --------------------------------------------\n";
+    cout << "\n\n\n\n\n\t\t\t\t\t\t\t---> Enter login Passcode: ";
+
+    ch = _getch();
+    while (ch != 13)
+    {
+        pass.push_back(ch);
+        cout << '*';
+        ch = _getch();
+    }
+    if (pass == "4")
+    {
+        cout << "\n\n\nAccess Granted! Welcome To Our System \n\n";
+        system("PAUSE");
+        system("CLS");
+    }
+    else
+    {
+        cout << "\n\n\nAccess Denied...Please Try Again!!!\n\n";
+        system("PAUSE");
+        system("CLS");
+        login();
+    }
+
+}
+
 
 
